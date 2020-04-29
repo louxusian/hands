@@ -1,0 +1,13 @@
+$body-color: red;
+
+body {
+  color: $body-color;
+  h1 {
+    font-size: 30px;
+    span {
+      color: #eee;
+    }
+  }
+}
+
+@import "button";
