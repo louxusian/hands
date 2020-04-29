@@ -12,4 +12,6 @@ npm install
 
 # build for production with minification
 npm run build
+
+// open index.html to see style guide example
 ```
