@@ -1,3 +1,32 @@
-.btn {
-  color: red;
+$button-padding: 0.85em 1em;
+$button-margin: 0 0 1em 0;
+$button-fill: solid;
+$button-background: $cinnabar;
+$button-background-hover: #E5E5E5;
+$button-color: $white;
+$button-color-alt: $cinnabar;
+$button-radius: 0;
+$button-opacity-disabled: 0.25;
+
+.button {
+  padding: 12px 28px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 60px;
+  letter-spacing: 0.05em;
+}
+
+.share-button {
+  color: $button-color;
+  background: $button-background;
+  border: 1px solid $cinnabar;
+  box-sizing: border-box;
+
+  :hover {
+    color: $button-color-alt;
+    background: $button-background-hover;
+    border: 1px solid $cinnabar;
+    box-sizing: border-box;
+  }
 }

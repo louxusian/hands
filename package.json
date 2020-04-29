@@ -1,7 +1,7 @@
 {
   "name": "hands",
   "version": "1.0.0",
-  "description": "A frontend project for hands Taiwan 2020",
+  "description": "A frontend project for HANDs Art Project Taiwan 2020",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
