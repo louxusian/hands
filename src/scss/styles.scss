@@ -139,7 +139,7 @@ a {
 .hands-blog-card-wrapper {
   width: 100%;
   display: flex;
-  align-items: baseline;
+  align-items: start;
   justify-content: space-between;
   margin-bottom: 30px;
 
@@ -155,9 +155,11 @@ a {
 
   .hands-blog-card-thumbnail {
     position: relative;
-    img {
-      width: 100%;
-    }
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
   }
 
   .hands-blog-card-video {
@@ -199,11 +201,25 @@ a {
     display: none;
   }
 
+  @include breakpoint('medium') {
+    .hands-blog-card-thumbnail {
+      max-height: 160px;
+    }
+  }
+
   @include breakpoint('small') {
     flex-wrap: wrap;
     min-height: unset;
+    margin-bottom: 10px;
+
     .hands-blog-card {
       margin: auto auto 40px;
+    }
+
+    .hands-blog-card-thumbnail {
+      height: 250px;
+      min-height: unset;
+      max-height: unset;
     }
 
     .hands-blog-card-content {
@@ -240,16 +256,19 @@ a {
   background-position: center;
   text-align: center;
   position: relative;
+
   > div {
     z-index: 1;
     color: $white;
   }
+
   .hands-banner-title {
     font-size: 36px;
     font-weight: bold;
     letter-spacing: 5px;
     margin-top: -30px;
   }
+
   .hands-banner-subtitle {
     display: none;
     font-weight: lighter;
@@ -257,6 +276,7 @@ a {
     margin-top: 20px;
     letter-spacing: 2px;
   }
+
   .hands-layer {
     background-color: rgba(52, 52, 52, .6);
     position: absolute;
@@ -266,6 +286,7 @@ a {
     height: 100%;
     z-index: 0;
   }
+
   @include breakpoint('small') {
     min-height: 300px;
     .hands-banner-title {
@@ -278,6 +299,21 @@ a {
     }
   }
 }
+
+// arrow
+.hands-arrow {
+  border: solid $light-grey;
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 14px;
+  &.left {
+    transform: rotate(135deg);
+  }
+  &.right {
+    transform: rotate(-45deg);
+  }
+}
+
 
 @import "button";
 @import "collectionBlog";

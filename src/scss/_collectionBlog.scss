@@ -95,7 +95,7 @@
   .blog-wrapper.large {
     display: flex;
 
-    @include breakpoint(medium) {
+    @include breakpoint('medium') {
       display: none;
     }
   }
@@ -127,6 +127,9 @@
         min-height: 300px;
         display: block;
         transition: all ease-in .2s;
+        @include breakpoint('small') {
+          min-height: 250px;
+        }
       }
 
       .blog-details {
@@ -150,6 +153,13 @@
             opacity: .9;
           }
         }
+
+        @include breakpoint('small') {
+          padding: 10px 16px;
+          .blog-tag {
+            margin-bottom: 0;
+          }
+        }
       }
 
     }
@@ -171,9 +181,16 @@
           background: rgba(255, 255, 255, .8);
         }
       }
+      @include breakpoint('small') {
+        .dot {
+          margin: 0 5px;
+          width: 12px;
+          height: 12px;
+        }
+      }
     }
 
-    @include breakpoint(medium) {
+    @include breakpoint('medium') {
       display: block;
       .blog-slider {
         display: flex;
@@ -183,15 +200,23 @@
 
   .btn-red {
     float: right;
+    @include breakpoint('small') {
+      float: unset;
+      display: block;
+    }
   }
 
   .blog-section {
-    margin-bottom: 180px;
+    margin-bottom: 120px;
+    @include breakpoint('small') {
+      margin-bottom: 80px;
+    }
   }
 
   .tag-section {
     background: $grey;
     padding: 30px;
+    margin-top: 180px;
 
     > div {
       font-size: 24px;
@@ -203,6 +228,10 @@
       font-size: 14px;
       padding: 4px 18px;
       margin-right: 10px;
+    }
+
+    @include breakpoint('small') {
+      margin-top: 100px;
     }
   }
 
