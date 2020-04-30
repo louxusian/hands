@@ -1,7 +1,7 @@
 #collectionBlog {
 
   section, div {
-    border: 1px solid red;
+    //border: 1px solid red;
   }
 
   section {
@@ -10,72 +10,79 @@
 
   .blog-wrapper {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     height: 400px;
-  }
 
-  .blog {
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 50%;
-    width: 40%;
-    overflow: hidden;
-    padding-bottom: 10px;
+    .blog {
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow: hidden;
+      margin-bottom: 10px;
+      min-height: 195px;
 
-    .blog-details {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      padding: 10px 20px;
-      background-image: linear-gradient(to right, rgba(52, 52, 52, 0.6), rgba(52, 52, 52, 0.6));
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
+      .blog-details {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 20px;
+        background-image: linear-gradient(to right, rgba(52, 52, 52, 0.6), rgba(52, 52, 52, 0.6));
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
 
-      .blog-tag {
-        color: $dark-tangerine;
-        flex: 1 50%;
-        font-size: 12px;
-        margin-bottom: 8px;
-      }
+        .blog-tag {
+          color: $dark-tangerine;
+          flex: 1 50%;
+          font-size: 12px;
+          margin-bottom: 8px;
+        }
 
-      .blog-date {
-        color: $white;
-        flex: 1 50%;
-        text-align: right;
-        font-size: 12px;
-      }
+        .blog-date {
+          color: $white;
+          flex: 1 50%;
+          text-align: right;
+          font-size: 12px;
+        }
 
-      .blog-title {
-        color: $white;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 15px;
-        letter-spacing: 0.05em;
-        flex: 1 100%;
+        .blog-title {
+          color: $white;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 15px;
+          letter-spacing: 0.05em;
+          flex: 1 100%;
+        }
       }
     }
 
-    &:first-child {
-      flex: 1 0 100%;
-      height: 100%;
-      width: 60%;
-      padding-right: 10px;
-      .blog-details {
-        padding: 40px 30px;
-        .blog-tag, .blog-date {
-          font-size: 16px;
-        }
-        .blog-title {
-          font-size: 18px;
-          line-height: 35px;
+    .blog-wrapper-left {
+      flex: 1 65%;
+      margin-right: 10px;
+
+      .blog {
+        padding-right: 10px;
+        min-height: 400px;
+
+        .blog-details {
+          padding: 40px 30px;
+
+          .blog-tag, .blog-date {
+            font-size: 16px;
+          }
+
+          .blog-title {
+            font-size: 18px;
+            line-height: 35px;
+          }
         }
       }
+    }
+
+    .blog-wrapper-right {
+      flex: 0 35%;
     }
   }
 
@@ -89,12 +96,14 @@
 
   .tag-section {
     background: $grey;
-    padding: 30px ;
+    padding: 30px;
+
     > div {
       font-size: 24px;
       color: $cinnabar;
       line-height: 40px;
     }
+
     .tag {
       font-size: 14px;
       padding: 4px 18px;
@@ -104,6 +113,7 @@
 
   .ad-section {
     position: relative;
+
     img {
       width: 100%;
     }
