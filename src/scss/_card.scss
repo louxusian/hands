@@ -1,0 +1,110 @@
+// blog card
+.hands-blog-card-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  .hands-blog-card {
+    min-height: 250px;
+    width: 100%;
+    margin-right: 20px;
+    margin-bottom: 30px;
+
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+  }
+
+  .hands-blog-card-thumbnail {
+    position: relative;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
+  }
+
+  .hands-blog-card-video {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 20px solid $dark-tangerine;
+  }
+
+  .hands-blog-card-content {
+    font-weight: bold;
+    min-height: 50px;
+    padding-right: 10px;
+    color: $dim-gray;
+    vertical-align: middle;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+
+  .hands-blog-card-meta {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hands-blog-card-date {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+
+  .hands-blog-card-date-mobile {
+    display: none;
+  }
+
+  @include breakpoint('medium') {
+    .hands-blog-card-thumbnail {
+      max-height: 160px;
+    }
+  }
+
+  @include breakpoint('small') {
+    flex-wrap: wrap;
+    min-height: unset;
+    margin-bottom: 10px;
+
+    .hands-blog-card {
+      margin: auto auto 40px;
+    }
+
+    .hands-blog-card-thumbnail {
+      height: 250px;
+      min-height: unset;
+      max-height: unset;
+    }
+
+    .hands-blog-card-content {
+      min-height: unset;
+      font-size: 18px;
+      margin: 10px auto 8px;
+    }
+
+    .hands-blog-card-meta {
+      font-size: 16px;
+    }
+
+    .hands-blog-card-date {
+      display: none;
+    }
+
+    .hands-blog-card-date-mobile {
+      display: block;
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 5px;
+    }
+  }
+}

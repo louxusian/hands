@@ -6,7 +6,7 @@ $button-background-alt: $white;
 $button-color-alt: $cinnabar;
 $button-margin: 5px auto;
 
-.btn {
+.hands-btn {
   padding: $button-padding;
   margin: $button-margin;
   font-size: 18px;
@@ -25,7 +25,7 @@ $button-margin: 5px auto;
   }
 }
 
-.btn-red {
+.hands-btn-red {
   border: 2px solid $button-background;
 
   &:hover {
@@ -35,7 +35,7 @@ $button-margin: 5px auto;
   }
 }
 
-.btn-white {
+.hands-btn-white {
   color: $button-color-alt;
   background: $button-background-alt;
   border: 2px solid $button-background;
@@ -47,16 +47,16 @@ $button-margin: 5px auto;
   }
 }
 
-.btn-disabled {
+.hands-btn-disabled {
   background: $light-grey;
   cursor: not-allowed;
 }
 
-.btn-black {
+.hands-btn-black {
   background: $dim-gray;
 }
 
-.tag {
+.hands-tag {
   display: inline-block;
   font-family: $font-base;
   font-style: normal;
@@ -72,7 +72,7 @@ $button-margin: 5px auto;
   }
 }
 
-.tag-white {
+.hands-tag-white {
   background: $white;
   color: $dim-gray;
   border: 1px solid $light-grey;
@@ -80,7 +80,7 @@ $button-margin: 5px auto;
   line-height: 1.3em;
 }
 
-.tag-yellow {
+.hands-tag-yellow {
   background: $dark-tangerine;
   color: $white;
   font-size: 14px;

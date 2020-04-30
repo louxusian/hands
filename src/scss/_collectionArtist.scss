@@ -1,0 +1,33 @@
+#collectionArtist {
+
+  section {
+    margin-bottom: 30px;
+  }
+
+  .artist-wrapper {
+    display: flex;
+    background-color: $solitude;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 80px;
+    }
+    > div {
+      padding: 30px;
+    }
+    .artist-category {
+      background-color: $dark-grey;
+      color: $dim-gray;
+      font-weight: bold;
+      font-size: 36px;
+      letter-spacing: 0.1em;
+      flex: none;
+      @include breakpoint('small') {
+        font-size: 24px;
+      }
+    }
+    .artists {
+      width: 100%;
+    }
+  }
+
+}
