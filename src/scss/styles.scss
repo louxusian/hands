@@ -151,9 +151,21 @@ a {
   }
 
   .hands-blog-card-thumbnail {
+    position: relative;
     img {
       width: 100%;
     }
+  }
+
+  .hands-blog-card-video {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 20px solid $dark-tangerine;
   }
 
   .hands-blog-card-content {
@@ -161,6 +173,7 @@ a {
     min-height: 50px;
     padding-right: 10px;
     color: $dim-gray;
+    vertical-align: middle;
 
     &:hover {
       opacity: .9;
@@ -177,6 +190,39 @@ a {
   .hands-blog-card-date {
     font-size: 12px;
     letter-spacing: 0.1em;
+  }
+
+  .hands-blog-card-date-mobile {
+    display: none;
+  }
+
+  @include breakpoint('small') {
+    flex-wrap: wrap;
+    min-height: unset;
+    .hands-blog-card {
+      margin: auto auto 40px;
+    }
+
+    .hands-blog-card-content {
+      min-height: unset;
+      font-size: 18px;
+      margin: 10px auto 8px;
+    }
+
+    .hands-blog-card-meta {
+      font-size: 16px;
+    }
+
+    .hands-blog-card-date {
+      display: none;
+    }
+
+    .hands-blog-card-date-mobile {
+      display: block;
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 5px;
+    }
   }
 }
 
