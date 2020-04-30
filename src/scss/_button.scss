@@ -56,6 +56,23 @@ $button-margin: 5px auto;
   background: $dim-gray;
 }
 
+.hands-btn-unfold {
+  background-color: $button-background-alt;
+  border: 1px solid $button-color-alt;
+  border-radius: 500px;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .hands-arrow {
+    border: solid $button-color-alt;
+    border-width: 0 3px 3px 0;
+    padding: 8px;
+  }
+}
+
 .hands-tag {
   display: inline-block;
   font-family: $font-base;

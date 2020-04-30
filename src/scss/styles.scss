@@ -158,6 +158,14 @@ a {
   &.right {
     transform: rotate(-45deg);
   }
+
+  &.up {
+    transform: rotate(-135deg);
+  }
+
+  &.down {
+    transform: rotate(45deg);
+  }
 }
 
 // tag

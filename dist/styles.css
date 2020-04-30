@@ -138,6 +138,12 @@ a {
 .hands-arrow.right {
   transform: rotate(-45deg);
 }
+.hands-arrow.up {
+  transform: rotate(-135deg);
+}
+.hands-arrow.down {
+  transform: rotate(45deg);
+}
 
 .hands-tag-section {
   background: #E5E5E5;
@@ -285,6 +291,23 @@ a {
 
 .hands-btn-black {
   background: #626262;
+}
+
+.hands-btn-unfold {
+  background-color: #FFFFFF;
+  border: 1px solid #E84228;
+  border-radius: 500px;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hands-btn-unfold .hands-arrow {
+  border: solid #E84228;
+  border-width: 0 3px 3px 0;
+  padding: 8px;
 }
 
 .hands-tag {
