@@ -3,7 +3,7 @@
 # Useful .gitignore templates: https://github.com/github/gitignore
 
 # Compiled directory
-dist/
+#dist/
 
 # Dependency directory
 node_modules
