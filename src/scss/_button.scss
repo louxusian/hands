@@ -56,6 +56,10 @@ $button-margin: 5px auto;
   font-family: $font-base;
   font-style: normal;
   font-weight: normal;
+  transition: all ease-in .2s;
+  &:hover {
+    opacity: .8;
+  }
 }
 
 .tag-white {

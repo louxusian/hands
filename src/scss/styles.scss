@@ -134,14 +134,50 @@ a {
 }
 
 .hands-blog-card-wrapper {
+  width: 100%;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   margin-bottom: 30px;
+
   .hands-blog-card {
-    min-height: 200px;
+    min-height: 250px;
+    width: 100%;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
-  
+
+  .hands-blog-card-thumbnail {
+    img {
+      width: 100%;
+    }
+  }
+
+  .hands-blog-card-content {
+    font-weight: bold;
+    min-height: 50px;
+    padding-right: 10px;
+    color: $dim-gray;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+
+  .hands-blog-card-meta {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hands-blog-card-date {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
 }
 
 @import "button";

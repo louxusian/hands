@@ -19,6 +19,12 @@
       overflow: hidden;
       margin-bottom: 10px;
       min-height: 195px;
+      display: block;
+      transition: all ease-in .2s;
+
+      &:hover {
+        opacity: .9;
+      }
 
       .blog-details {
         position: absolute;
@@ -27,10 +33,10 @@
         padding: 10px 20px;
         background-image: linear-gradient(to right, rgba(52, 52, 52, 0.6), rgba(52, 52, 52, 0.6));
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        min-height: 80px;
 
         .blog-tag {
           color: $dark-tangerine;
@@ -54,6 +60,7 @@
           line-height: 15px;
           letter-spacing: 0.05em;
           flex: 1 100%;
+          align-self: baseline;
         }
       }
     }
@@ -67,7 +74,7 @@
         min-height: 400px;
 
         .blog-details {
-          padding: 40px 30px;
+          padding: 40px 30px 30px;
 
           .blog-tag, .blog-date {
             font-size: 16px;
@@ -91,7 +98,7 @@
   }
 
   .blog-section {
-    margin-bottom: 120px;
+    margin-bottom: 180px;
   }
 
   .tag-section {
