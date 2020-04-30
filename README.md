@@ -37,7 +37,7 @@ breakpoint
 - medium 1024px
 - large 1200px
 > ```
-> @include breakpoint(medium) {
+> @include breakpoint('medium') {
 >     
 > }
 >```
