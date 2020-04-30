@@ -119,6 +119,12 @@ a {
   margin-left: 1em;
 }
 
+.hands-subtitle h3 span {
+  line-height: 1.5em;
+  font-weight: normal;
+  color: #E84228;
+}
+
 .hands-blog-card-wrapper {
   width: 100%;
   display: flex;
@@ -130,8 +136,9 @@ a {
   min-height: 250px;
   width: 100%;
   margin-right: 20px;
+  margin-bottom: 30px;
 }
-.hands-blog-card-wrapper .hands-blog-card:last-child {
+.hands-blog-card-wrapper .hands-blog-card:nth-child(3) {
   margin-right: 0;
 }
 .hands-blog-card-wrapper .hands-blog-card-thumbnail {
@@ -275,6 +282,34 @@ a {
 }
 .hands-arrow.right {
   transform: rotate(-45deg);
+}
+
+.hands-tag-section {
+  background: #E5E5E5;
+  padding: 30px;
+  margin-top: 180px;
+}
+.hands-tag-section > div {
+  font-size: 24px;
+  color: #E84228;
+  line-height: 40px;
+}
+.hands-tag-section .tag {
+  font-size: 14px;
+  padding: 4px 18px;
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .hands-tag-section {
+    margin-top: 100px;
+  }
+}
+
+.hands-ad-section {
+  position: relative;
+}
+.hands-ad-section img {
+  width: 100%;
 }
 
 .btn {
@@ -556,29 +591,10 @@ a {
     margin-bottom: 80px;
   }
 }
-#collectionBlog .tag-section {
-  background: #E5E5E5;
-  padding: 30px;
-  margin-top: 180px;
+
+#collectionBlogCategoryTag section {
+  margin-bottom: 50px;
 }
-#collectionBlog .tag-section > div {
-  font-size: 24px;
-  color: #E84228;
-  line-height: 40px;
-}
-#collectionBlog .tag-section .tag {
-  font-size: 14px;
-  padding: 4px 18px;
-  margin-right: 10px;
-}
-@media (max-width: 768px) {
-  #collectionBlog .tag-section {
-    margin-top: 100px;
-  }
-}
-#collectionBlog .ad-section {
-  position: relative;
-}
-#collectionBlog .ad-section img {
-  width: 100%;
+#collectionBlogCategoryTag .hands-tag-section {
+  margin-top: 120px;
 }

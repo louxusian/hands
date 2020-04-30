@@ -134,6 +134,13 @@ a {
   }
 }
 
+.hands-subtitle {
+  h3 span {
+    line-height: 1.5em;
+    font-weight: normal;
+    color: $cinnabar;
+  }
+}
 
 // blog card
 .hands-blog-card-wrapper {
@@ -147,8 +154,9 @@ a {
     min-height: 250px;
     width: 100%;
     margin-right: 20px;
+    margin-bottom: 30px;
 
-    &:last-child {
+    &:nth-child(3) {
       margin-right: 0;
     }
   }
@@ -314,6 +322,39 @@ a {
   }
 }
 
+// tag
+.hands-tag-section {
+  background: $grey;
+  padding: 30px;
+  margin-top: 180px;
+
+  > div {
+    font-size: 24px;
+    color: $cinnabar;
+    line-height: 40px;
+  }
+
+  .tag {
+    font-size: 14px;
+    padding: 4px 18px;
+    margin-right: 10px;
+  }
+
+  @include breakpoint('small') {
+    margin-top: 100px;
+  }
+}
+
+// ad
+.hands-ad-section {
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+}
+
 
 @import "button";
 @import "collectionBlog";
+@import "collectionBlogCategoryTag";

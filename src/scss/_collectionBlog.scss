@@ -1,9 +1,5 @@
 #collectionBlog {
 
-  section, div {
-    //border: 1px solid red;
-  }
-
   section {
     margin-bottom: 50px;
   }
@@ -210,36 +206,6 @@
     margin-bottom: 120px;
     @include breakpoint('small') {
       margin-bottom: 80px;
-    }
-  }
-
-  .tag-section {
-    background: $grey;
-    padding: 30px;
-    margin-top: 180px;
-
-    > div {
-      font-size: 24px;
-      color: $cinnabar;
-      line-height: 40px;
-    }
-
-    .tag {
-      font-size: 14px;
-      padding: 4px 18px;
-      margin-right: 10px;
-    }
-
-    @include breakpoint('small') {
-      margin-top: 100px;
-    }
-  }
-
-  .ad-section {
-    position: relative;
-
-    img {
-      width: 100%;
     }
   }
 }

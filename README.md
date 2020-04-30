@@ -26,6 +26,7 @@ npm run watch
 
 ## Pages
 - collection-blog.html
+- collection-blog-category-tag.html
 
 ## Files
 - `dist/` 編譯好的檔案
