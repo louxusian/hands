@@ -1,3 +1,5 @@
+@import "mixin";
+
 $dark-tangerine: #FF9E12;
 $cinnabar: #E84228;
 $white: #FFFFFF;
@@ -5,6 +7,7 @@ $solitude: #EDEFF1;
 $light-grey: #D3D3D3;
 $dim-gray: #626262;
 $gondola: #343434;
+$grey: #E5E5E5;
 
 $font-base: "Noto Sans TC",
 "Helvetica Neue",
@@ -12,9 +15,39 @@ $font-base: "Noto Sans TC",
 "Microsoft JhengHei",
 "Arial";
 
+$font-comfortaa: 'Comfortaa', $font-base;
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
 body {
   color: $gondola;
   font-family: $font-base;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  @include breakpoint(medium) {
+    max-width: 600px;
+  }
+  @include breakpoint(small) {
+    max-width: none;
+    width: 100%;
+    padding: 0 20px;
+  }
 }
 
 h1 {
@@ -25,6 +58,7 @@ h1 {
   letter-spacing: 0.02em;
   color: $gondola;
 }
+
 h2 {
   font-style: normal;
   font-weight: normal;
@@ -33,6 +67,7 @@ h2 {
   letter-spacing: 0.02em;
   color: $cinnabar;
 }
+
 h3 {
   font-style: normal;
   font-weight: bold;
@@ -40,7 +75,11 @@ h3 {
   line-height: 43px;
   letter-spacing: 0.02em;
   color: $gondola;
+  @include breakpoint('small') {
+    font-size: 28px;
+  }
 }
+
 h4 {
   font-style: normal;
   font-weight: normal;
@@ -49,6 +88,7 @@ h4 {
   letter-spacing: 0.02em;
   color: $cinnabar;
 }
+
 h5 {
   font-style: normal;
   font-weight: bold;
@@ -56,7 +96,11 @@ h5 {
   line-height: 35px;
   letter-spacing: 0.02em;
   color: $gondola;
+  @include breakpoint('small') {
+    font-size: 22px;
+  }
 }
+
 p {
   font-style: normal;
   font-weight: normal;
@@ -64,9 +108,41 @@ p {
   line-height: 21px;
   color: $gondola;
 }
+
 a {
   text-decoration: none;
   cursor: pointer;
+  display: inline-block;
+}
+
+.hands-title {
+  color: $dim-gray;
+
+  > * {
+    line-height: 1.5em;
+    display: inline-block;
+  }
+
+  h3 {
+    border-bottom: 5px solid $dark-tangerine;
+  }
+
+  h5 {
+    font-family: $font-comfortaa;
+    margin-left: 1em;
+  }
+}
+
+.hands-blog-card-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  .hands-blog-card {
+    min-height: 200px;
+  }
+  
 }
 
 @import "button";
+@import "collectionBlog";

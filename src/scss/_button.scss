@@ -1,32 +1,76 @@
-$button-padding: 0.85em 1em;
+$button-padding: 8px 12px;
 $button-margin: 0 0 1em 0;
-$button-fill: solid;
 $button-background: $cinnabar;
-$button-background-hover: #E5E5E5;
 $button-color: $white;
+$button-background-alt: $white;
 $button-color-alt: $cinnabar;
-$button-radius: 0;
-$button-opacity-disabled: 0.25;
+$button-margin: 5px auto;
 
-.button {
-  padding: 12px 28px;
-  font-size: 24px;
+.btn {
+  padding: $button-padding;
+  margin: $button-margin;
+  font-size: 18px;
   font-style: normal;
+  font-family: $font-comfortaa;
   font-weight: bold;
-  line-height: 60px;
   letter-spacing: 0.05em;
-}
-
-.share-button {
+  box-sizing: border-box;
+  transition: all ease-in 0.2s;
   color: $button-color;
   background: $button-background;
-  border: 1px solid $cinnabar;
-  box-sizing: border-box;
+}
 
-  :hover {
+.btn-red {
+  border: 2px solid $button-background;
+
+  &:hover {
     color: $button-color-alt;
-    background: $button-background-hover;
-    border: 1px solid $cinnabar;
-    box-sizing: border-box;
+    background: $button-background-alt;
+    border: 2px solid $button-background;
   }
+}
+
+.btn-white {
+  color: $button-color-alt;
+  background: $button-background-alt;
+  border: 2px solid $button-background;
+
+  &:hover {
+    color: $button-color;
+    background: $button-background;
+    border: 2px solid $button-background;
+  }
+}
+
+.btn-disabled {
+  background: $light-grey;
+  cursor: not-allowed;
+}
+
+.btn-black {
+  background: $dim-gray;
+}
+
+.tag {
+  display: inline-block;
+  font-family: $font-base;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.tag-white {
+  background: $white;
+  color: $dim-gray;
+  border: 1px solid $light-grey;
+  font-size: 12px;
+  padding: 2px 10px;
+  line-height: 1.3em;
+}
+
+.tag-yellow {
+  background: $dark-tangerine;
+  color: $white;
+  font-size: 14px;
+  padding: 2px 5px;
+  line-height: 1.3em;
 }
