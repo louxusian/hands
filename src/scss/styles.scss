@@ -37,7 +37,7 @@ body {
   margin: 0;
 }
 
-.container {
+.hands-container {
   max-width: 900px;
   margin: auto;
   @include breakpoint(medium) {
@@ -115,6 +115,7 @@ a {
   display: inline-block;
 }
 
+// title
 .hands-title {
   color: $dim-gray;
 
@@ -133,6 +134,8 @@ a {
   }
 }
 
+
+// blog card
 .hands-blog-card-wrapper {
   width: 100%;
   display: flex;
@@ -222,6 +225,56 @@ a {
       font-size: 14px;
       line-height: 20px;
       margin-top: 5px;
+    }
+  }
+}
+
+// banner
+.hands-banner {
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  > div {
+    z-index: 1;
+    color: $white;
+  }
+  .hands-banner-title {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-top: -30px;
+  }
+  .hands-banner-subtitle {
+    display: none;
+    font-weight: lighter;
+    font-size: 18px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+  }
+  .hands-layer {
+    background-color: rgba(52, 52, 52, .6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  @include breakpoint('small') {
+    min-height: 300px;
+    .hands-banner-title {
+      letter-spacing: 3px;
+      font-size: 28px;
+    }
+    .hands-banner-subtitle {
+      display: block;
+      font-size: 16px;
     }
   }
 }
