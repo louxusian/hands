@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -243,6 +244,68 @@ a {
   margin: 50px auto;
 }
 
+.hands-collapse-wrapper {
+  position: relative;
+  max-height: 340px;
+  overflow: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  transition: max-height 1s ease-in-out 0s;
+}
+.hands-collapse-wrapper:before {
+  content: "";
+  height: 60%;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  background: linear-gradient(rgba(255, 255, 255, 0) 0%, white 75%);
+}
+.hands-collapse-wrapper .hands-btn-more-group {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 30px);
+}
+.hands-collapse-wrapper.open {
+  max-height: 8000px;
+}
+.hands-collapse-wrapper.open:before {
+  display: none;
+}
+.hands-collapse-wrapper.open .hands-btn-more-group {
+  display: none;
+}
+
+.hands-progress-bar {
+  position: relative;
+  background: #D3D3D3;
+  height: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.hands-progress-bar .bar {
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hands-progress-bar .bar:after {
+  position: absolute;
+  background: #FF9E12;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1024px) {
+  .hands-progress-bar {
+    height: 8px;
+  }
+  .hands-progress-bar .bar {
+    height: 8px;
+  }
+}
+
 .hands-btn {
   padding: 8px 12px;
   margin: 5px auto;
@@ -256,6 +319,7 @@ a {
   color: #FFFFFF;
   background: #E84228;
   text-align: center;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .hands-btn {
@@ -293,7 +357,33 @@ a {
   background: #626262;
 }
 
-.hands-btn-unfold {
+.hands-btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hands-btn-group > .hands-btn {
+  width: 100%;
+  margin: 10px;
+}
+@media (max-width: 500px) {
+  .hands-btn-group > .hands-btn {
+    margin: 5px;
+  }
+}
+
+.hands-btn-more-group {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hands-btn-more {
   background-color: #FFFFFF;
   border: 1px solid #E84228;
   border-radius: 500px;
@@ -303,11 +393,16 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
-.hands-btn-unfold .hands-arrow {
+.hands-btn-more .hands-arrow {
   border: solid #E84228;
   border-width: 0 3px 3px 0;
   padding: 8px;
+}
+
+.hands-word-more {
+  color: #626262;
 }
 
 .hands-tag {
@@ -445,7 +540,7 @@ a {
 }
 
 .hands-banner {
-  min-height: 500px;
+  min-height: 360px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -721,4 +816,236 @@ a {
 }
 #collectionArtist .artist-wrapper .artists {
   width: 100%;
+}
+
+#pageArtist section {
+  margin-bottom: 30px;
+}
+#pageArtist .artist-banner {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: left;
+  position: relative;
+  z-index: -1;
+}
+@media (max-width: 1024px) {
+  #pageArtist .artist-banner {
+    min-height: 360px;
+  }
+}
+#pageArtist .artist-banner .artist-layer {
+  background-image: linear-gradient(to top, white, rgba(255, 255, 255, 0.9) 10%, transparent 60%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#pageArtist .artist-banner-buttons {
+  width: 100%;
+  text-align: right;
+  margin: -40px auto auto;
+}
+@media (max-width: 1024px) {
+  #pageArtist .artist-banner-buttons {
+    text-align: left;
+    margin-top: 20px;
+  }
+}
+#pageArtist .artist-banner-buttons > a {
+  margin: auto 4px;
+}
+#pageArtist .artist-banner-title {
+  margin-top: -100px;
+  z-index: 1;
+}
+@media (max-width: 1024px) {
+  #pageArtist .artist-banner-title {
+    margin-top: -135px;
+  }
+}
+#pageArtist .artist-banner-title .artist-name {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 52px;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  #pageArtist .artist-banner-title .artist-name {
+    font-size: 28px;
+  }
+}
+#pageArtist .artist-banner-title .artist-name a {
+  color: #FF9E12;
+  margin-left: 10px;
+}
+#pageArtist .artist-banner-title .artist-description {
+  font-size: 18px;
+  line-height: 26px;
+}
+#pageArtist .artist-content {
+  margin-top: 50px;
+  max-width: 750px;
+  color: #343434;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 2px;
+}
+@media (max-width: 1024px) {
+  #pageArtist .artist-content {
+    margin-top: 30px;
+    max-width: unset;
+  }
+}
+#pageArtist .artist-project {
+  border: 1px solid #D3D3D3;
+  margin-bottom: 40px;
+}
+#pageArtist .artist-project .artist-project-container {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  padding: 48px;
+  min-height: 400px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 1024px) {
+  #pageArtist .artist-project .artist-project-container {
+    padding: 30px;
+  }
+}
+@media (max-width: 500px) {
+  #pageArtist .artist-project .artist-project-container {
+    min-height: 360px;
+  }
+}
+#pageArtist .artist-project .artist-project-container .artist-project-layer {
+  background-image: linear-gradient(180deg, rgba(98, 98, 98, 0.5) -2.46%, rgba(98, 98, 98, 0.5) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#pageArtist .artist-project .artist-project-container .artist-project-title {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 43px;
+}
+@media (max-width: 1024px) {
+  #pageArtist .artist-project .artist-project-container .artist-project-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+@media (max-width: 768px) {
+  #pageArtist .artist-project .artist-project-container .artist-project-title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+#pageArtist .artist-project .artist-project-container .artist-project-detail {
+  max-width: 360px;
+}
+@media (max-width: 500px) {
+  #pageArtist .artist-project .artist-project-container .artist-project-detail {
+    max-width: unset;
+    width: 100%;
+  }
+}
+#pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+#pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-status > div {
+  font-weight: bold;
+  font-size: 36px;
+  color: #FFFFFF;
+}
+#pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-status > div:after {
+  font-size: 18px;
+  display: block;
+  margin-top: 5px;
+  font-weight: normal;
+}
+@media (max-width: 1024px) {
+  #pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-status > div {
+    font-size: 32px;
+  }
+  #pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-status > div > div {
+    font-size: 16px;
+  }
+}
+#pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-status .artist-project-backer:after {
+  content: "人贊助";
+}
+#pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-status .artist-project-share:after {
+  content: "分享";
+}
+#pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-status .artist-project-days:after {
+  content: "天結束";
+}
+#pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-progress .hands-progress-bar {
+  flex: 1 100%;
+}
+#pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-progress .artist-project-goal {
+  color: #FFFFFF;
+}
+#pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-progress .artist-project-goal .artist-project-goal-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+@media (max-width: 1024px) {
+  #pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-progress .artist-project-goal .artist-project-goal-title {
+    font-size: 18px;
+  }
+}
+#pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-progress .artist-project-goal .artist-project-goal-number {
+  font-weight: bold;
+  font-size: 18px;
+}
+@media (max-width: 1024px) {
+  #pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-progress .artist-project-goal .artist-project-goal-number {
+    font-size: 13px;
+  }
+}
+#pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-progress .artist-project-percent {
+  color: #FF9E12;
+  font-weight: bold;
+  font-size: 50px;
+}
+@media (max-width: 1024px) {
+  #pageArtist .artist-project .artist-project-container .artist-project-detail .artist-project-progress .artist-project-percent {
+    font-size: 40px;
+  }
+}
+#pageArtist .artist-project .hands-btn-group {
+  padding: 20px;
+}
+@media (max-width: 500px) {
+  #pageArtist .artist-project .hands-btn-group {
+    padding: 10px;
+  }
 }

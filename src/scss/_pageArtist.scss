@@ -1,0 +1,222 @@
+#pageArtist {
+
+  section {
+    margin-bottom: 30px;
+  }
+
+  .artist-banner {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: left;
+    position: relative;
+    z-index: -1;
+    @include breakpoint('medium') {
+      min-height: 360px;
+    }
+
+    .artist-layer {
+      background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, .9) 10%, transparent 60%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+
+  .artist-banner-buttons {
+    width: 100%;
+    text-align: right;
+    margin: -40px auto auto;
+    @include breakpoint('medium') {
+      text-align: left;
+      margin-top: 20px;
+    }
+    > a {
+      margin: auto 4px;
+    }
+  }
+
+  .artist-banner-title {
+    margin-top: -100px;
+    z-index: 1;
+    @include breakpoint('medium') {
+      margin-top: -135px;
+    }
+    .artist-name {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 52px;
+      vertical-align: middle;
+      display: flex;
+      align-items: center;
+      @include breakpoint('medium') {
+        font-size: 28px;
+      }
+      a {
+        color: $dark-tangerine;
+        margin-left: 10px;
+      }
+    }
+    .artist-description {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  .artist-content {
+    margin-top: 50px;
+    max-width: 750px;
+    color: $gondola;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 2px;
+    @include breakpoint('medium') {
+      margin-top: 30px;
+      max-width: unset;
+    }
+  }
+
+  .artist-project {
+    border: 1px solid $light-grey;
+    margin-bottom: 40px;
+
+    .artist-project-container {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      display: flex;
+      padding: 48px;
+      min-height: 400px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+      @include breakpoint('medium') {
+        padding: 30px;
+      }
+      @include breakpoint('xsmall') {
+        min-height: 360px;
+      }
+
+      .artist-project-layer {
+        background-image: linear-gradient(180deg, rgba(98, 98, 98, 0.5) -2.46%, rgba(98, 98, 98, 0.5) 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      .artist-project-title {
+        color: $white;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 43px;
+        @include breakpoint('medium') {
+          font-size: 28px;
+          line-height: 36px;
+        }
+        @include breakpoint('small') {
+          font-size: 24px;
+          line-height: 28px;
+        }
+      }
+
+      .artist-project-detail {
+        max-width: 360px;
+        @include breakpoint('xsmall') {
+          max-width: unset;
+          width: 100%;
+        }
+        .artist-project-status {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-align: center;
+          > div {
+            font-weight: bold;
+            font-size: 36px;
+            color: $white;
+            &:after {
+              font-size: 18px;
+              display: block;
+              margin-top: 5px;
+              font-weight: normal;
+            }
+            @include breakpoint('medium') {
+              font-size: 32px;
+              > div {
+                font-size: 16px;
+              }
+            }
+          }
+          .artist-project-backer {
+            &:after {
+              content: '人贊助';
+            }
+          }
+          .artist-project-share {
+            &:after {
+              content: '分享';
+            }
+          }
+          .artist-project-days {
+            &:after {
+              content: '天結束';
+            }
+          }
+        }
+        .artist-project-progress {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          .hands-progress-bar {
+            flex: 1 100%;
+          }
+          .artist-project-goal {
+            color: $white;
+            .artist-project-goal-title {
+              font-weight: bold;
+              font-size: 24px;
+              @include breakpoint('medium') {
+                font-size: 18px;
+              }
+            }
+            .artist-project-goal-number {
+              font-weight: bold;
+              font-size: 18px;
+              @include breakpoint('medium') {
+                font-size: 13px;
+              }
+            }
+          }
+          .artist-project-percent {
+            color: $dark-tangerine;
+            font-weight: bold;
+            font-size: 50px;
+            @include breakpoint('medium') {
+              font-size: 40px;
+            }
+          }
+        }
+      }
+    }
+
+    .hands-btn-group {
+      padding: 20px;
+      @include breakpoint('xsmall') {
+        padding: 10px;
+      }
+    }
+  }
+
+}
