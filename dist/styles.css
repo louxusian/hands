@@ -907,6 +907,14 @@ a {
     max-width: unset;
   }
 }
+#pageArtist .artist-content .hands-btn-more-group {
+  left: calc(calc(50% - 30px) + 75px);
+}
+@media (max-width: 1024px) {
+  #pageArtist .artist-content .hands-btn-more-group {
+    left: calc(50% - 30px);
+  }
+}
 #pageArtist .artist-project-wrapper {
   max-height: 1000px;
   margin-bottom: 50px;
