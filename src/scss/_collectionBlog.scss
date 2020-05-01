@@ -101,10 +101,7 @@
     position: relative;
 
     .blog-slider {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     .blog {
@@ -158,32 +155,6 @@
         }
       }
 
-    }
-
-    .dots {
-      display: flex;
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      .dot {
-        display: block;
-        margin: 0 8px;
-        width: 14px;
-        height: 14px;
-        background: rgba(255, 255, 255, .5);
-        border-radius: 100px;
-        &:hover {
-          background: rgba(255, 255, 255, .8);
-        }
-      }
-      @include breakpoint('small') {
-        .dot {
-          margin: 0 5px;
-          width: 12px;
-          height: 12px;
-        }
-      }
     }
 
     @include breakpoint('medium') {

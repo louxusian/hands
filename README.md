@@ -22,15 +22,16 @@ npm run watch
 ```
 
 ## Style Guide
-- index.html
+- `index.html`
 
 ## Pages
-- collection-blog.html
-- collection-blog-category-tag.html
-- collection-artist.html
-- page-artist.html
+- `collection-blog.html`
+- `collection-blog-category-tag.html`
+- `collection-artist.html`
+- `page-artist.html`
 
 ## Files
+- `assets/` 第三方套件及照片
 - `dist/` 編譯好的檔案
 - `src/` 開發使用的檔案
 

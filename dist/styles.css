@@ -678,10 +678,7 @@ a {
   position: relative;
 }
 #collectionBlog .blog-wrapper.medium .blog-slider {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 #collectionBlog .blog-wrapper.medium .blog {
   width: 100%;
@@ -729,31 +726,6 @@ a {
   }
   #collectionBlog .blog-wrapper.medium .blog .blog-details .blog-tag {
     margin-bottom: 0;
-  }
-}
-#collectionBlog .blog-wrapper.medium .dots {
-  display: flex;
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-#collectionBlog .blog-wrapper.medium .dots .dot {
-  display: block;
-  margin: 0 8px;
-  width: 14px;
-  height: 14px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 100px;
-}
-#collectionBlog .blog-wrapper.medium .dots .dot:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
-@media (max-width: 768px) {
-  #collectionBlog .blog-wrapper.medium .dots .dot {
-    margin: 0 5px;
-    width: 12px;
-    height: 12px;
   }
 }
 @media (max-width: 1024px) {
@@ -1062,4 +1034,41 @@ a {
   #pageArtist .artist-project .hands-btn-group {
     padding: 10px;
   }
+}
+
+.slick-dots {
+  bottom: 24px;
+}
+.slick-dots li button:before {
+  color: #D3D3D3;
+  font-size: 14px;
+}
+.slick-dots li.slick-active button:before {
+  color: #FFFFFF;
+}
+
+.slick-next, .slick-prev {
+  top: 45%;
+  border: solid rgba(211, 211, 211, 0.6);
+  border-width: 0 6px 6px 0;
+  padding: 14px;
+  z-index: 1;
+}
+.slick-next:before, .slick-prev:before {
+  content: unset;
+}
+@media (max-width: 768px) {
+  .slick-next, .slick-prev {
+    padding: 8px;
+  }
+}
+
+.slick-next {
+  right: 30px;
+  transform: rotate(-45deg);
+}
+
+.slick-prev {
+  left: 30px;
+  transform: rotate(135deg);
 }
