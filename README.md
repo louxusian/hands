@@ -27,6 +27,8 @@ npm run watch
 ## Pages
 - collection-blog.html
 - collection-blog-category-tag.html
+- collection-artist.html
+- page-artist.html
 
 ## Files
 - `dist/` 編譯好的檔案
@@ -34,6 +36,7 @@ npm run watch
 
 ## Mixin
 breakpoint 
+- xsmall 500px
 - small 768px
 - medium 1024px
 - large 1200px
