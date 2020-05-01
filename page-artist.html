@@ -68,7 +68,7 @@
                 <h3>募資計劃</h3>
                 <h5>Crowd Funding</h5>
             </div>
-            <div class="artist-project-wrapper">
+            <div class="artist-project-wrapper hands-collapse-wrapper">
                 <div class="artist-project">
                     <div class="artist-project-container" style="background-image: url('img/project1.png')">
                         <div class="artist-project-layer"></div>
@@ -122,6 +122,12 @@
                         <a href="#" target="_blank" class="hands-btn hands-btn-red">贊助</a>
                         <a href="#" target="_blank" class="hands-btn hands-btn-white">分享</a>
                     </div>
+                </div>
+                <div class="hands-btn-more-group">
+                    <div class="hands-btn-more">
+                        <div class="hands-arrow down"></div>
+                    </div>
+                    <div class="hands-word-more">展開看全部</div>
                 </div>
             </div>
         </section>
@@ -233,7 +239,7 @@
     $(document).ready(function() {
 
         $('.hands-collapse-wrapper').each(function () {
-            if ($(this).height() < 340) {
+            if ($(this).height() < parseInt($(this).css('max-height'), 10)) {
                 $(this).addClass('open');
             }
         });

@@ -288,14 +288,16 @@ a {
     width: 100%;
     pointer-events: none;
     background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 75%);
+    z-index: 1;
   }
   .hands-btn-more-group {
     position: absolute;
     bottom: 0;
     left: calc(50% - 30px);
+    z-index: 2;
   }
   &.open {
-    max-height: 8000px;
+    max-height: 10000em !important;
     &:before {
       display: none;
     }

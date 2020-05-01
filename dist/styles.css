@@ -261,14 +261,16 @@ a {
   width: 100%;
   pointer-events: none;
   background: linear-gradient(rgba(255, 255, 255, 0) 0%, white 75%);
+  z-index: 1;
 }
 .hands-collapse-wrapper .hands-btn-more-group {
   position: absolute;
   bottom: 0;
   left: calc(50% - 30px);
+  z-index: 2;
 }
 .hands-collapse-wrapper.open {
-  max-height: 8000px;
+  max-height: 10000em !important;
 }
 .hands-collapse-wrapper.open:before {
   display: none;
@@ -904,6 +906,10 @@ a {
     margin-top: 30px;
     max-width: unset;
   }
+}
+#pageArtist .artist-project-wrapper {
+  max-height: 1000px;
+  margin-bottom: 50px;
 }
 #pageArtist .artist-project {
   border: 1px solid #D3D3D3;
